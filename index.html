@@ -1390,57 +1390,173 @@
   }
 
   /* ═══════════════════ RESPONSIVE ═══════════════════ */
-  @media (max-width: 1024px) {
-    .about-grid { grid-template-columns: 1fr; gap: 2.5rem; }
-    .contact-grid { grid-template-columns: 1fr; gap: 3rem; }
-    .hero-stats { position: static; margin-top: 3rem; }
-    #hero { flex-direction: column; justify-content: center; padding-bottom: 6rem; }
-    .hero-content { max-width: 100%; }
+  .nav{
+  z-index: 1000;
+}
+
+@media (max-width: 1024px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
   }
 
-  @media (max-width: 768px) {
-    .nav-links { display: none; }
-    .hamburger { display: flex; }
-
-    .timeline-spine { left: 20px; }
-    .timeline-item {
-      grid-template-columns: 40px 1fr;
-      grid-template-rows: auto;
-    }
-    .timeline-item.left .timeline-content,
-    .timeline-item.right .timeline-content {
-      grid-column: 2;
-      grid-row: 1;
-      text-align: left;
-      padding-left: 1.5rem;
-      padding-right: 0;
-    }
-    .timeline-item.left .timeline-center,
-    .timeline-item.right .timeline-center {
-      grid-column: 1;
-      grid-row: 1;
-    }
-    .timeline-item.left .timeline-empty,
-    .timeline-item.right .timeline-empty { display: none; }
-    .timeline-item.left .timeline-card::after,
-    .timeline-item.right .timeline-card::before { display: none; }
-    .timeline-country { writing-mode: initial; transform: none; }
-    .timeline-skills { justify-content: flex-start; }
-
-    .cert-modal-details { grid-template-columns: 1fr; }
-    .philosophy-pillars { gap: 2rem; }
-    .hero-stats { flex-direction: row; flex-wrap: wrap; gap: 1.5rem; }
-
-    footer { flex-direction: column; gap: 0.5rem; text-align: center; }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
-  @media (max-width: 480px) {
-    .hero-ctas { flex-direction: column; }
-    .btn-primary, .btn-outline { text-align: center; }
-    .expertise-grid { grid-template-columns: 1fr 1fr; }
-    .certs-grid { grid-template-columns: 1fr; }
-    .philosophy-quote { font-size: clamp(1.6rem, 6vw, 2.5rem); }
+  .hero-stats {
+    position: static;
+    margin-top: 3rem;
   }
+
+  #hero {
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 6rem;
+  }
+
+  .hero-content {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .nav-links {
+    display: none;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+
+  /* HERO MOBILE FIXES */
+  .hero-content{
+    padding-top: 6rem;
+  }
+
+  .hero-name{
+    font-size: 4.5rem;
+    line-height: 0.9;
+    margin-bottom: 1rem;
+  }
+
+  .hero-eyebrow{
+    margin-top: 1.5rem;
+    margin-bottom: 1.5rem;
+    justify-content: flex-start;
+    gap: 0.6rem;
+  }
+
+  .hero-eyebrow-text{
+    font-size: 0.62rem;
+    letter-spacing: 0.14em;
+  }
+
+  .hero-eyebrow-line{
+    width: 24px;
+  }
+
+  .hero-title{
+    margin-top: 1rem;
+  }
+
+  .timeline-spine {
+    left: 20px;
+  }
+
+  .timeline-item {
+    grid-template-columns: 40px 1fr;
+    grid-template-rows: auto;
+  }
+
+  .timeline-item.left .timeline-content,
+  .timeline-item.right .timeline-content {
+    grid-column: 2;
+    grid-row: 1;
+    text-align: left;
+    padding-left: 1.5rem;
+    padding-right: 0;
+  }
+
+  .timeline-item.left .timeline-center,
+  .timeline-item.right .timeline-center {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .timeline-item.left .timeline-empty,
+  .timeline-item.right .timeline-empty {
+    display: none;
+  }
+
+  .timeline-item.left .timeline-card::after,
+  .timeline-item.right .timeline-card::before {
+    display: none;
+  }
+
+  .timeline-country {
+    writing-mode: initial;
+    transform: none;
+  }
+
+  .timeline-skills {
+    justify-content: flex-start;
+  }
+
+  .cert-modal-details {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-pillars {
+    gap: 2rem;
+  }
+
+  .hero-stats {
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  footer {
+    flex-direction: column;
+    gap: 0.5rem;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .hero-content{
+    padding-top: 7rem;
+  }
+
+  .hero-name{
+    font-size: 3.8rem;
+  }
+
+  .hero-ctas {
+    flex-direction: column;
+  }
+
+  .btn-primary,
+  .btn-outline {
+    text-align: center;
+  }
+
+  .expertise-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .certs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .philosophy-quote {
+    font-size: clamp(1.6rem, 6vw, 2.5rem);
+  }
+}
 
   /* ═══════════════════ FULLSCREEN PDF VIEWER ═══════════════════ */
   .pdf-viewer-overlay {
